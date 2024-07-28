@@ -9,8 +9,8 @@ def conv2d(image: np.ndarray, kernel: np.ndarray, stride: int=1, padding: int=0)
     image_height, image_width = image.shape
 
     # determines number of valid positions where kernel can be placed on the input image
-    output_height = (image_height - kernel_height + 2 * padding) // stride + 1 
-    output_width = (image_width - kernel_width + 2 * padding) // stride + 1
+    output_height = (image_height - kernel_height + padding) // stride + 1 
+    output_width = (image_width - kernel_width + padding) // stride + 1
 
     output_matrix = np.zeros((output_height, output_width))
 
